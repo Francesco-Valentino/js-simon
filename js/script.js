@@ -22,6 +22,14 @@ function callCaountDown(){
     document.getElementById("minutesTimer").innerHTML = twoDigits(minutesCountdown);
 
     console.log(minutesCountdown);
+
+    let hoursCountdown = Math.floor(minutesCountdown / 60);
+
+    hoursCountdown = hoursCountdown % 60;
+
+    document.getElementById("hoursTimer").innerHTML = twoDigits(hoursCountdown);
+
+    
 }
 
 function twoDigits(myNumber){
