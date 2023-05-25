@@ -9,31 +9,27 @@ function callCaountDown(){
 
     let secondsCountdown = Math.floor(remainingTime / 1000);
 
-    secondsCountdown = secondsCountdown % 60;
-
-    document.getElementById("secondsTimer").innerHTML = twoDigits(secondsCountdown);
-
-    console.log(secondsCountdown);
-
     let minutesCountdown = Math.floor(secondsCountdown / 60);
-
-    minutesCountdown = minutesCountdown % 60;
-
-    document.getElementById("minutesTimer").innerHTML = twoDigits(minutesCountdown);
-
-    console.log(minutesCountdown);
-
+    
     let hoursCountdown = Math.floor(minutesCountdown / 60);
-
+    
+    let daysCountdown = Math.floor(hoursCountdown / 24)
+  
+    secondsCountdown = secondsCountdown % 60;
+    
+    minutesCountdown = minutesCountdown % 60;
+    
     hoursCountdown = hoursCountdown % 24;
 
+    document.getElementById("secondsTimer").innerHTML = twoDigits(secondsCountdown);
+    
+    document.getElementById("minutesTimer").innerHTML = twoDigits(minutesCountdown);
+    
     document.getElementById("hoursTimer").innerHTML = twoDigits(hoursCountdown);
-
-    console.log(hoursCountdown);
-
-    let daysCountdown = Math.floor(hoursCountdown / 24);
-
+    
     document.getElementById("daysTimer").innerHTML = twoDigits(daysCountdown);
+
+    
 }
 
 function twoDigits(myNumber){
