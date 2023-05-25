@@ -25,11 +25,15 @@ function callCaountDown(){
 
     let hoursCountdown = Math.floor(minutesCountdown / 60);
 
-    hoursCountdown = hoursCountdown % 60;
+    hoursCountdown = hoursCountdown % 24;
 
     document.getElementById("hoursTimer").innerHTML = twoDigits(hoursCountdown);
 
-    
+    console.log(hoursCountdown);
+
+    let daysCountdown = Math.floor(hoursCountdown / 24);
+
+    document.getElementById("daysTimer").innerHTML = twoDigits(daysCountdown);
 }
 
 function twoDigits(myNumber){
