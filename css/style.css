@@ -3,3 +3,44 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+main{
+    background-color: #6495ED;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+div.box{
+    background-color: white;
+    width: 50%;
+    text-align: center;
+    color: #008080;
+    font-family: sans-serif;
+    padding: 2rem;
+}
+
+div.box h2{
+    font-size: 2rem;
+}
+
+div.timer{
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem;
+}
+
+div.miniBox{
+    margin: .5rem 0;
+}
+
+div.miniBox h1{
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+}
+
+div.miniBox h3{
+    font-size: 1.7rem;
+}
+
