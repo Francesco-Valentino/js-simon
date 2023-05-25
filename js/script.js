@@ -1,20 +1,30 @@
-let currentDate = new Date().getTime();
-
-console.log(currentDate);
-
 let lessonDate = new Date("May 26, 2023 09:30:00");
-
-console.log(lessonDate);
-
-let remainingTime = lessonDate - currentDate;
 
 let countDown = setInterval(callCaountDown, 1000);
 
 function callCaountDown(){
-    let daysCountDown = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+    let currentDate = new Date().getTime();
 
-    console.log(daysCountDown);
+    let remainingTime = lessonDate - currentDate;
 
-    document.getElementById("daysTimer").innerHTML = daysCountDown;
+    let secondsCountdown = Math.floor(remainingTime / 1000);
+
+    secondsCountdown = secondsCountdown % 60;
+
+    document.getElementById("secondsTimer").innerHTML = twoDigits(secondsCountdown);
+
+    console.log(secondsCountdown);
+
+    let minutesCountdown = Math.floor(secondsCountdown / 60);
+
+    minutesCountdown = minutesCountdown % 60;
+
+    document.getElementById("minutesTimer").innerHTML = twoDigits(minutesCountdown);
+
+    console.log(minutesCountdown);
+}
+
+function twoDigits(myNumber){
+    return myNumber.toString().padStart(2, "0");
 }
 
